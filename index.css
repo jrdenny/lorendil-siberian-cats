@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro:200,400');
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+body, p, a {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: rgb(189,155,102) url("images/20220225_104815.jpeg") center top no-repeat fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+    -moz-background-clip: border;
+    -webkit-background-origin: border-box;
+    background-origin: border-box;}
+
+
+section {
+    margin: 5% 0;
+    padding: 5%;
+    background-color: rgba(189,155,102, .4);
+    backdrop-filter: blur(5px);
+}
+/* apply non-web-kit styling if backdrop-filter not supported */
+@supports not (backdrop-filter: blur(12px)) {
+    section {
+        margin: 5% 0;
+        padding: 5%;
+        background: rgba(189,155,102, .4)url("images/20220225_104815-blur.gif") center top no-repeat fixed;
+        -webkit-background-size: cover;
+        background-size: cover;
+        -moz-background-clip: border;
+        -webkit-background-origin: border-box;
+        background-origin: border-box;
+    }}
+.hero > img {
+
+}
+
+.grid > article {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
+}
+
+img {
+    max-width: 100%;
+}
