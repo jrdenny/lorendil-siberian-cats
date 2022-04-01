@@ -11,14 +11,12 @@ html {
     scroll-behavior: smooth;
 }
 
-html/*, section.backdrop*/ {
-    background: rgb(189,155,102) url("images/20220225_104815.jpeg") center center no-repeat fixed;
+html {
+    background: rgb(189,155,102) url("images/20220225_104815.jpeg") 38% center no-repeat fixed;
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
     overflow-y: auto;
-    -webkit-background-size: cover;
-    background-size: cover;
     -moz-background-clip: border;
     -webkit-background-origin: border-box;
     background-origin: border-box;
@@ -27,36 +25,51 @@ section {
     margin: 20% 0;
     padding: 10%;
     box-sizing: border-box;
+    width:100%;
+}
+@supports (backdrop-filter: blur(10px)) {
+    section.backdrop {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(12px) grayscale(0.6) opacity(0.93);
+    }
 }
 
-section.backdrop {
-    width:100%;
-    /*background: rgba(144,144,144, .4) none center center no-repeat fixed;
-    backdrop-filter: saturate(0.9) blur(10px);*/
-}
-/* apply non-web-kit styling if backdrop-filter not supported */
-/*@supports not (backdrop-filter: blur(10px)) {*/
+@supports not (backdrop-filter: blur(10px)) {
     section.backdrop {
-        background: transparent none;
         position: relative;
+        background: none;
     }
-    section.backdrop:before {
+    section.backdrop:before,  section.backdrop:after {
         content: '';
         position: absolute;
         left: 0;
         top: 0;
         right: 0;
         bottom: 0;
-        background: rgba(144,144,144, .4) url("images/20220225_104815.jpeg") center center no-repeat fixed;
-        -webkit-background-size: cover;
-        background-size: cover;
-        -moz-background-clip: border;
-        -webkit-background-origin: border-box;
-        background-origin: border-box;
-        filter: blur(12px) grayscale(0.6) opacity(0.93);
+        opacity: 0.96;
         z-index: -1;
     }
-/*}*/
+    section.backdrop:before {
+        background: url("images/20220225_104815.jpeg") 38% center no-repeat fixed;
+        filter: blur(12px) grayscale(0.6) brightness(1.1);
+        z-index: -2;
+    }
+    section.backdrop:after {
+        background: rgba(255, 255, 255, 0.24);
+        z-index: -1;
+    }
+}
+
+@media (max-aspect-ratio: 640/480) {
+    html, section.backdrop:before {
+        background-size: auto 100vh;
+    }
+}
+@media (min-aspect-ratio: 640/480) {
+    html, section.backdrop:before {
+        background-size: 100vw auto;
+    }
+}
 
 .hero > img {
 
