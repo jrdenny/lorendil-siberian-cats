@@ -71,6 +71,10 @@ section {
     }
 }
 
+@media (hover: none) {
+    html, section.backdrop:before { background-attachment: unset; }
+}
+
 .hero > img {
 
 }
