@@ -74,6 +74,7 @@ section {
 @media (hover: none) {
     html, section.backdrop:before {
         background-size: revert;
+        background-image: none;
         background-attachment: scroll;
     }
 }
