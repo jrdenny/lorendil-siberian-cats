@@ -84,7 +84,7 @@ html, section.backdrop:before {
     html, section.backdrop:before {
         background-attachment: initial;
 
-        background-size: auto 100vh;
+        background-size: 100vw;
     }
     section.backdrop:before {
         background: transparent none 38% center no-repeat fixed;
