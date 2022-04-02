@@ -77,16 +77,16 @@ html, section.backdrop:before {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}/**/
+}
 
 
-@media (hover: none) {
+/*@media (hover: none) {*/
     html, section.backdrop:before {
         background-attachment: initial;
         background-image: none;
         background-size: auto 100vh;
     }
-}
+/*}*/
 
 .hero > img {
 
