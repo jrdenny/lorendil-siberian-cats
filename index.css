@@ -89,6 +89,16 @@ html, section.backdrop:before {
     section.backdrop:before {
         background-image: none;
     }
+@media (max-aspect-ratio: 640/480) {
+    html, section.backdrop:before {
+        background-size: auto 100vh;
+    }
+}
+@media (min-aspect-ratio: 640/480) {
+    html, section.backdrop:before {
+        background-size: 100vw auto;
+    }
+}
 /*}*/
 
 .hero > img {
