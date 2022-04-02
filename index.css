@@ -87,7 +87,8 @@ html, section.backdrop:before {
         background-size: auto 100vh;
     }
     section.backdrop:before {
-        background-image: none;
+        background: transparent none 38% center no-repeat fixed;
+       
     }
 @media (max-aspect-ratio: 640/480) {
     html, section.backdrop:before {
