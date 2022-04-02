@@ -72,7 +72,9 @@ section {
 }
 
 @media (hover: none) {
-    html, section.backdrop:before { background-attachment: unset; }
+    html, section.backdrop:before {
+        background-attachment: scroll;
+    }
 }
 
 .hero > img {
