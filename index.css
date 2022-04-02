@@ -52,7 +52,7 @@ section {
         z-index: -1;
     }
     section.backdrop:before {
-        background: url("images/20220225_104815.jpeg") 38% center no-repeat fixed;
+       /* background: url("images/20220225_104815.jpeg") 38% center no-repeat fixed;*/
         filter: blur(12px) grayscale(0.6) brightness(1.1);
         z-index: -2;
     }
@@ -88,7 +88,7 @@ html, section.backdrop:before {
     }
     section.backdrop:before {
         background: transparent none 38% center no-repeat fixed;
-       
+
     }
 @media (max-aspect-ratio: 640/480) {
     html, section.backdrop:before {
