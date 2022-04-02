@@ -84,7 +84,7 @@ html, section.backdrop:before {
     html, section.backdrop:before {
         background-attachment: initial;
         background-image: none;
-        background-size: auto;
+        background-size: auto 100vh;
     }
 }
 
