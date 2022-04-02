@@ -15,6 +15,8 @@ html {
     background: rgb(189,155,102) url("images/20220225_104815.jpeg") 38% center no-repeat fixed;
     width: 100%;
     max-width: 100%;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
     overflow-x: hidden;
     overflow-y: auto;
     -moz-background-clip: border;
@@ -75,16 +77,16 @@ html, section.backdrop:before {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
+}/**/
 
-/*
+
 @media (hover: none) {
     html, section.backdrop:before {
-        background-size: revert;
+        background-attachment: initial;
         background-image: none;
-        background-attachment: scroll;
+        background-size: auto;
     }
-}*/
+}
 
 .hero > img {
 
