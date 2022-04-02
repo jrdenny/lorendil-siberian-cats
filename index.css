@@ -71,14 +71,14 @@ section {
     html, section.backdrop:before {
         background-size: 100vw auto;
     }
-}*/
+}*//*
 html, section.backdrop:before {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
-
+*/
 
 /*@media (hover: none) {*/
     html, section.backdrop:before {
